@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* FONTS */
+@font-face {
+  font-family: montserrat;
+  src: url(Montserrat-Light.otf); }
+@font-face {
+  font-family: montserrat;
+  src: url(Montserrat-Regular.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: montserrat;
+  src: url(Montserrat-UltraLight.otf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: horizon;
+  src: url(Horizon-PersonalUse.otf);
+}
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: montserrat, sans-serif;
+  background-color: #f2f2f2;
+  background-size: 8em;
+  background-repeat: repeat;
+   background-image: url("img/GROUND.img"); }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+#top_header {
+  padding: 1em 0; }
+  #top_header .logo {
+    font-family:horizon;
+    float: left;
+    font-size: 2em;
+    color: #333; }
+    #top_header .logo span {
+      font-weight: 300;
+      color: #777; }
+  #top_header #main_nav {
+    float: right;
+    font-size: 1em;
+    padding-top: 2.2em; }
+    #top_header #main_nav a {
+      color: #777;
+      text-decoration: none;
+      margin-left: 1em; }
+    #top_header #main_nav #active {
+      font-weight: bold;
+      color: #000; }
+
+.menu {
+  display: none; }
+
+#photos_wrapper {
+  width: 100%;
+  padding: .4em 0 .1em 0;
+  text-align: center;
+  background-color:#fff; }
+  #photos_wrapper .row table {
+    width: 100%; }
+    #photos_wrapper .row table tr td {
+      position: relative; }
+      #photos_wrapper .row table tr td img {
+        width: 100%;
+        max-width: 100%; }
+      #photos_wrapper .row table tr td:hover .hover {
+        display: block; }
+      #photos_wrapper .row table tr td .first {
+        padding: .1em .2em .1em 0; }
+      #photos_wrapper .row table tr td .center {
+        padding: .1em .2em; }
+      #photos_wrapper .row table tr td .last {
+        padding: .1em 0 .1em .2em; }
+      #photos_wrapper .row table tr td .hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #FFFFFF;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 30%;
+        top: 0;
+        left: 0;
+        display: none; }
+
+
+#galeria_wrapper {
+  width: 100%;
+  padding: .4em 0 .1em 0;
+  text-align: center;
+  background-color:#fff; 
+}
+  #galeria_wrapper .row table {
+    width: 100%; 
+  }
+  #galeria_wrapper .galeria_item {
+    margin: 1em;
+    position: relative;
+	  margin-top:3em; }
+    #galeria_wrapper .galeria_item .hover p{
+      margin: 1em;
+      position: relative;
+      border-width:1px; }
+    #galeria_wrapper .hover img {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+  #galeria_wrapper .row table {
+    width: 100%; }
+    #galeria_wrapper .row table tr td img {
+      width: 100%;
+      max-width: 100%; }
+    #galeria_wrapper .row table tr td:hover .hover {
+      display: block; }
+    #galeria_wrapper .row table tr td .hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #FFFFFF;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 12%;
+      top: 0;
+      left: 0;
+      display: none;
+      
+      /* align-items items in column */
+      flex-direction: column;
+      /* center items horizontally */
+      align-items: center;
+      /* center items vertically */
+      justify-content: center;
+      cursor: pointer;
+      font-size: 2em; }
+      
+#main_footer {
+  padding: 1em 0;
+  text-align: center;
+  }
+  #main_footer .logo {
+    font-family:horizon;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700; }
+    #main_footer .logo span {
+      font-weight: 300;
+      color: #000; }
+  #main_footer .copyright {
+    color: #777;
+    font-size: .75em;
+    margin: 0; }
+  #main_footer .links {
+    display: inline; }
+    #main_footer .links a {
+      color: #777;
+      font-size: .75em;
+      text-decoration: none;
+      margin: 0 .5em; }
+      #main_footer .links a:hover {
+        color: #000; }
+
+p.titol{
+  position: relative;
+  font-size:2vw;
+}
+p.foto{
+  position: relative;
+  font-size:1.5vw;
+}
+/* more text title */
+p.titol2{
+  position: relative;
+  font-size:2vw;
+}
+p.foto2{
+  position: relative;
+  top: -30px;
+  font-size:1.5vw;
+}
+/* GALERÍA */
+
+#galeria_wrapperF {
+
+  background-color:#FFF;
+  }
+  #galeria_wrapperF .galeria_item {
+    margin-left: 11vw;
+    margin-right: 11vw;
+    margin-bottom: 1.5em;
+    position: relative;
+	  margin-top:2em; }
+    #galeria_wrapperF .galeria_item .hover p{
+      margin: 1em;
+      position: relative;
+      
+      border-width:1px; }
+    #galeria_wrapperF .hover img {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+  #galeria_wrapperF .row table {
+    width: 100%; }
+    #galeria_wrapperF .row table tr td img {
+      width: 100%;
+      max-width: 100%; }
+    #galeria_wrapperF .row table tr td:hover .hover {
+      display: block; }
+    #galeria_wrapperF .row table tr td .hover {
+      
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding:18%;
+      color: #FFFFFF;
+      text-align: center;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      display: none; 
+    }
+  
+	  
+	  /* CONTACTO */
+	  
+	  .links2{ padding: 5em 3em 1em ;}
+	  
+	  .lel { color:#A6A6A6; font-weight:300;  width:100%; }
+	  
+	  .mik { font-size:1.2em; width:50%;  }
+	  
+	  
+	.left{  background-color:#FFF; margin-bottom: 2em; }
+	
+	.imgRedonda {
+    width:300px;
+    height:300px;
+    border-radius:150px;
+  
+}
+
+
+	
+  /* BODAS */
+.bgimg {
+    background-image: url("img/escritorio_recortada.png");
+}
+
+.estructura1 { font-size:1.2em; width:70%;   font-weight:300; }
+
+.estructura2 { font-size:1.2em; width:90%; padding:1em; margin:1em; font-weight:300; opacity: 0.80; background-color:#E6E6E6;}
+
+
+
+.epi{ font-size:3em; font-weight:300; } 
+
+.titulo{ width:100%; }
+
+.contenido1 { width:40%; float:left; margin:2em; padding:0.2em; background-color:#E6E6E6;  }
+
+.contenido2 { width:40%; float:right; margin:2em; padding:0.2em; background-color:#E6E6E6;  }
+
+.lol { border-collapse: separate;
+  border-spacing:1em;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/escritorio_recortada_sm.png");}
+
+/* INFORMACIÓN */
+
+.textos{ -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; width:100%; height:100%;}
+
+.texto2{ width:30%; padding:1em; margin-left:2em; float:left;}
+.texto3{ width:30%; padding:1em; float:right; }
+.texto4{ width:30%; margin-right:2em;   padding:1em; float:right;}
+
+.texto5{ width:30%; margin-left:3em; float:left;}
+.texto6{ width:30%; }
+.texto7{ width:30%; float:right;}
+
+@media only screen and (max-width: 768px) {
+
+	.titulillo{ font-size:1.5em;}
+	
+	.titulo { display:none; }
+ 
+ .estructura1 { width:85%; height:20%; text-align:center; font-size:1.2em; border-top:0 solid black; border-bottom:0 solid black; margin:auto; }
+ 
+  
+  .texto{ width:200%;}
+  
+  #main_nav {
+    display: none; }
+	
+	.for { display: none;}
+	
+	.links2 { width:100%;}
+
+  #main_nav.active {
+    display: block;
+    width: 100%;
+    padding-bottom: 1em; }
+    #main_nav.active a {
+      display: block;
+      padding: 1em 0;
+      border-bottom: 1px solid #ddd; }
+      #main_nav.active a:last-child {
+        border-bottom: none; }
+
+  .menu {
+    display: block;
+    float: right; }
+    .menu i {
+      font-size: 1.5em;
+      color: #333;
+      padding-top: 1.3em; }
+
+  #galeria_wrapper {
+    margin-top: 0;  }
+    #galeria_wrapper .row table {
+      width: 100%; }
+      #galeria_wrapper .row table tr td img {
+        width: 100%;
+        max-width: 100%; }
+      #galeria_wrapper .row table tr td:hover .hover {
+        display: block; }
+      #galeria_wrapper .row table tr td .hover {
+        font-size: 1.3em; }
+		
+		
+	
+
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+	
+	
+	
+	.for { display: none;}
+
+
+}
+
+
+	
+		.section { 
+			display: block; 
+			width: 30%; 
+			height: 30%; 
+			float: left; 
+			margin-left: 2em; 
+			
+		}
+
+		
+		#container {
+    width: 3900px;
+    position: relative;
+    top: 50%;
+    margin-top: 2em;}
+	
+
+	
+	
+	

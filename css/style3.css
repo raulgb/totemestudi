@@ -1,0 +1,6 @@
+ /* Barra Horizontal de Corrimiento */ 
+ .barra-panel {overflow:auto;  width:100%;  } 
+.borde-Panel { height:700px; background:#FFF; } 
+
+.barra-Scroll {width: 400630px;} /* Aca entran 20 fotos con un incremento de 130px por fotograma +/- */
+.contiene-Item {border: 1px solid RGB(0,0,0); width:100%; height: 100%; float: left; margin: 10em; padding:10em;}
